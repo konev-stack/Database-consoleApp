@@ -8,6 +8,8 @@ namespace Database
     {
         public static void Main()
         {
+            start:
+            Console.Clear();
             Console.WriteLine("press 1 for login");
             Console.WriteLine("press 2 for register");
             char inputChar = Console.ReadKey().KeyChar;
@@ -18,6 +20,10 @@ namespace Database
             else if (inputChar == '2')
             {
                 Register.RegisterMethod();
+            }
+            else
+            {
+                goto start;
             }
         }
     }
